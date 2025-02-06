@@ -14,10 +14,10 @@ export default function LoginPage() {
 
       <main className="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-gray-500/10 to-black/20 opacity-30"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-40"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-gray-800/20 via-transparent to-transparent opacity-40"></div>
-          <div className="absolute inset-0 bg-grid-white/10 bg-[size:20px_20px] opacity-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-gray-500/10 to-black/20 opacity-30" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-40" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-gray-800/20 via-transparent to-transparent opacity-40" />
+          <div className="absolute inset-0 bg-grid-white/10 bg-[size:20px_20px] opacity-10" />
         </div>
         <div className="max-w-md w-full space-y-8 relative z-10 bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-white/10">
           <div>
@@ -83,9 +83,11 @@ export default function LoginPage() {
             </div>
 
             <div>
-              <Button type="submit" className="w-full flex justify-center py-2 px-4">
-                Sign In
-              </Button>
+              <Link href="/register">
+                <Button type="button" className="w-full flex justify-center py-2 px-4">
+                  Register
+                </Button>
+              </Link>
             </div>
           </form>
         </div>

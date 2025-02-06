@@ -50,10 +50,12 @@ export default function TemplatesPage() {
             </Link>
           </nav>
           <div className="ml-auto flex items-center space-x-4">
-            <Link className="text-foreground/60 text-sm transition-colors hover:text-foreground" href="#">
-              Sign In
+            <Link className="text-foreground/60 text-sm transition-colors hover:text-foreground" href="/login">
+              Login
             </Link>
-            <Button className="bg-foreground text-background hover:bg-foreground/90">Sign Up</Button>
+            <Link href="/register">
+              <Button className="bg-foreground text-background hover:bg-foreground/90">Sing Up</Button>
+            </Link>
           </div>
         </div>
       </header>
