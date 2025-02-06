@@ -7,7 +7,7 @@ const templates = [
   {
     id: 1,
     title: "Stellar Smart Contract Starter",
-    description: "Un template básico para comenzar con contratos inteligentes en Stellar usando Rust.",
+    description: "A basic template to get started with smart contracts on Stellar using Rust.",
     category: "Smart Contracts",
     blockchainCompatibility: ["Stellar", "Solana"],
     image:
@@ -16,7 +16,7 @@ const templates = [
   {
     id: 2,
     title: "Stellar DeFi Framework",
-    description: "Framework para construir aplicaciones DeFi en Stellar con Rust.",
+    description: "Framework for building DeFi applications on Stellar with Rust.",
     category: "DeFi",
     blockchainCompatibility: ["Stellar", "Polkadot"],
     image:
@@ -25,8 +25,8 @@ const templates = [
   {
     id: 3,
     title: "Multi-Chain Asset Bridge",
-    description: "Template para crear un puente de activos entre Stellar y otras blockchains.",
-    category: "Interoperabilidad",
+    description: "Template for creating an asset bridge between Stellar and other blockchains.",
+    category: "Interoperability",
     blockchainCompatibility: ["Stellar", "Ethereum", "Solana"],
     image:
       "https://sjc.microlink.io/qm1Xdzzy07BhdhCbA5aG0Nnwwmvudh6bjUydMJ9fhZqpdkoZR9HJIBUEjpBrBc0ZBe542ft8nFbqVPr8N8-bYQ.jpeg",
@@ -43,26 +43,26 @@ export default function TemplatesPage() {
           </Link>
           <nav className="flex items-center space-x-6 text-sm">
             <Link className="text-foreground/60 transition-colors hover:text-foreground" href="/">
-              Inicio
+              Home
             </Link>
             <Link className="text-foreground/60 transition-colors hover:text-foreground" href="#">
-              Documentación
+              Documentation
             </Link>
           </nav>
           <div className="ml-auto flex items-center space-x-4">
             <Link className="text-foreground/60 text-sm transition-colors hover:text-foreground" href="#">
-              Iniciar Sesión
+              Sign In
             </Link>
-            <Button className="bg-foreground text-background hover:bg-foreground/90">Registrarse</Button>
+            <Button className="bg-foreground text-background hover:bg-foreground/90">Sign Up</Button>
           </div>
         </div>
       </header>
       <main className="flex-1 pt-24">
         <section className="container py-8 md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-            <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Templates de Rust para Stellar</h1>
+            <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Rust Templates for Stellar</h1>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Explora nuestra colección de templates optimizados para el desarrollo en Stellar
+              Explore our collection of optimized templates for Stellar development
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
@@ -96,7 +96,7 @@ export default function TemplatesPage() {
                 <CardFooter className="p-6 pt-0">
                   <Link href={`/templates/${template.id}`} className="w-full">
                     <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                      Ver Detalles
+                      View Details
                     </Button>
                   </Link>
                 </CardFooter>

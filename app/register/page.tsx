@@ -21,11 +21,11 @@ export default function RegisterPage() {
         </div>
         <div className="max-w-md w-full space-y-8 relative z-10 bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-white/10">
           <div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold">Crear una cuenta</h2>
+            <h2 className="mt-6 text-center text-3xl font-extrabold">Create an Account</h2>
             <p className="mt-2 text-center text-sm text-white/60">
-              O{" "}
+              Or{" "}
               <Link href="/login" className="font-medium text-red-500 hover:text-red-400">
-                inicia sesión si ya tienes una cuenta
+                sign in if you already have an account
               </Link>
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function RegisterPage() {
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="name" className="sr-only">
-                  Nombre completo
+                  Full name
                 </label>
                 <input
                   id="name"
@@ -43,12 +43,12 @@ export default function RegisterPage() {
                   autoComplete="name"
                   required
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-white/10 placeholder-white/50 text-white bg-white/5 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm"
-                  placeholder="Nombre completo"
+                  placeholder="Full name"
                 />
               </div>
               <div>
                 <label htmlFor="email-address" className="sr-only">
-                  Correo electrónico
+                  Email address
                 </label>
                 <input
                   id="email-address"
@@ -57,12 +57,12 @@ export default function RegisterPage() {
                   autoComplete="email"
                   required
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-white/10 placeholder-white/50 text-white bg-white/5 focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm"
-                  placeholder="Correo electrónico"
+                  placeholder="Email address"
                 />
               </div>
               <div>
                 <label htmlFor="password" className="sr-only">
-                  Contraseña
+                  Password
                 </label>
                 <input
                   id="password"
@@ -71,12 +71,12 @@ export default function RegisterPage() {
                   autoComplete="new-password"
                   required
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-white/10 placeholder-white/50 text-white bg-white/5 focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm"
-                  placeholder="Contraseña"
+                  placeholder="Password"
                 />
               </div>
               <div>
                 <label htmlFor="password-confirm" className="sr-only">
-                  Confirmar contraseña
+                  Confirm password
                 </label>
                 <input
                   id="password-confirm"
@@ -85,14 +85,14 @@ export default function RegisterPage() {
                   autoComplete="new-password"
                   required
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-white/10 placeholder-white/50 text-white bg-white/5 rounded-b-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm"
-                  placeholder="Confirmar contraseña"
+                  placeholder="Confirm password"
                 />
               </div>
             </div>
 
             <div>
               <Button type="submit" className="w-full flex justify-center py-2 px-4">
-                Registrarse
+                Sign Up
               </Button>
             </div>
           </form>
@@ -103,7 +103,7 @@ export default function RegisterPage() {
         <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
           <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
             <p className="text-center text-sm leading-loose text-white/60 md:text-left">
-              &copy; 2024 ScaffoldRust. Todos los derechos reservados.
+              &copy; 2024 ScaffoldRust. All rights reserved.
             </p>
           </div>
         </div>

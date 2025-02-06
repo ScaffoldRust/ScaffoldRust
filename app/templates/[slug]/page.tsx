@@ -8,7 +8,7 @@ import { CodeBlock } from "@/components/code-block"
 const TEMPLATE_DATA = {
   "1": {
     title: "Stellar Smart Contract Starter",
-    description: "Un template básico para comenzar con contratos inteligentes en Stellar usando Rust.",
+    description: "A basic template to get started with smart contracts on Stellar using Rust.",
     author: "StellarRust",
     framework: "Rust",
     useCase: "Smart Contracts",
@@ -23,7 +23,7 @@ const TEMPLATE_DATA = {
   },
   "2": {
     title: "Stellar DeFi Framework",
-    description: "Framework para construir aplicaciones DeFi en Stellar con Rust.",
+    description: "Framework for building DeFi applications on Stellar with Rust.",
     author: "StellarRust",
     framework: "Rust",
     useCase: "DeFi",
@@ -38,10 +38,10 @@ const TEMPLATE_DATA = {
   },
   "3": {
     title: "Multi-Chain Asset Bridge",
-    description: "Template para crear un puente de activos entre Stellar y otras blockchains.",
+    description: "Template for creating an asset bridge between Stellar and other blockchains.",
     author: "StellarRust",
     framework: "Rust",
-    useCase: "Interoperabilidad",
+    useCase: "Interoperability",
     tech: "Stellar SDK, Web3",
     images: [
       "/templates.webp",
