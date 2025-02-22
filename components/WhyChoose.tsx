@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-black text-white  lg:px-0 px-6 mb-16">
+    <section className="bg-black text-white  lg:px-0 px-6 mb-16 mt-24">
       <div className="lg:max-w-7xl max-w-5xl mx-auto text-center">
         <h2 className="text-2xl md:text-4xl font-bold mb-10">
           Why Choose ScaffoldRust?
