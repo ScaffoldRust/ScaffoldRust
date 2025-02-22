@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import KeyFeatures from "@/components/KeyFeatures";
+import { About } from "@/components/modules/about/AboutSection";
 
 export default function Home() {
   return (
@@ -68,6 +69,7 @@ export default function Home() {
           <div className="mt-[180px] mb-[96px]">
             <KeyFeatures />
           </div>
+          <About />
 
           <div className="mt-16 md:mt-24">
             <div className="relative mx-auto max-w-6xl px-6 lg:px-8">

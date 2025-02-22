@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function LoginPage() {
   return (
@@ -21,10 +21,15 @@ export default function LoginPage() {
         </div>
         <div className="max-w-md w-full space-y-8 relative z-10 bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-white/10">
           <div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold">Sign In</h2>
+            <h2 className="mt-6 text-center text-3xl font-extrabold">
+              Sign In
+            </h2>
             <p className="mt-2 text-center text-sm text-white/60">
               Or{" "}
-              <Link href="/register" className="font-medium text-red-500 hover:text-red-400">
+              <Link
+                href="/register"
+                className="font-medium text-red-500 hover:text-red-400"
+              >
                 create an account if you don't have one
               </Link>
             </p>
@@ -70,13 +75,19 @@ export default function LoginPage() {
                   type="checkbox"
                   className="h-4 w-4 text-gray-600 focus:ring-gray-500 border-white/10 rounded bg-white/5"
                 />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-white/60">
+                <label
+                  htmlFor="remember-me"
+                  className="ml-2 block text-sm text-white/60"
+                >
                   Remember me
                 </label>
               </div>
 
               <div className="text-sm">
-                <Link href="#" className="font-medium text-gray-400 hover:text-white">
+                <Link
+                  href="#"
+                  className="font-medium text-gray-400 hover:text-white"
+                >
                   Forgot your password?
                 </Link>
               </div>
@@ -84,7 +95,10 @@ export default function LoginPage() {
 
             <div>
               <Link href="/register">
-                <Button type="button" className="w-full flex justify-center py-2 px-4">
+                <Button
+                  type="button"
+                  className="w-full flex justify-center py-2 px-4"
+                >
                   Register
                 </Button>
               </Link>
@@ -103,6 +117,5 @@ export default function LoginPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
