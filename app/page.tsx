@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { About } from "@/components/modules/about/AboutSection";
+import WhyChooseUs from "@/components/WhyChoose";
+import About from "@/components/modules/about/AboutSection";
+
 
 export default function Home() {
   return (
@@ -176,6 +178,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <WhyChooseUs/>
       </main>
       <footer className="border-t border-white/5">
         <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
