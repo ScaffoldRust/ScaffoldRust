@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function RegisterPage() {
   return (
@@ -21,10 +21,15 @@ export default function RegisterPage() {
         </div>
         <div className="max-w-md w-full space-y-8 relative z-10 bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-white/10">
           <div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold">Create an Account</h2>
+            <h2 className="mt-6 text-center text-3xl font-extrabold">
+              Create an Account
+            </h2>
             <p className="mt-2 text-center text-sm text-white/60">
               Or{" "}
-              <Link href="/login" className="font-medium text-red-500 hover:text-red-400">
+              <Link
+                href="/login"
+                className="font-medium text-red-500 hover:text-red-400"
+              >
                 sign in if you already have an account
               </Link>
             </p>
@@ -91,14 +96,20 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <Button type="submit" className="w-full flex justify-center py-2 px-4">
+              <Button
+                type="submit"
+                className="w-full flex justify-center py-2 px-4"
+              >
                 Sign Up
               </Button>
             </div>
 
             <div className="mt-4">
               <Link href="/login">
-                <Button type="submit" className="w-full flex justify-center py-2 px-4">
+                <Button
+                  type="submit"
+                  className="w-full flex justify-center py-2 px-4"
+                >
                   Already have an account? Sign In
                 </Button>
               </Link>
@@ -117,6 +128,5 @@ export default function RegisterPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
-

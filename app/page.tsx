@@ -1,7 +1,9 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import WhyChooseUs from "@/components/WhyChoose"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import WhyChooseUs from "@/components/WhyChoose";
+import About from "@/components/modules/about/AboutSection";
+
 
 export default function Home() {
   return (
@@ -12,15 +14,24 @@ export default function Home() {
             <span className="font-bold text-xl">ScaffoldRust</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm">
-            <Link className="text-white/60 transition-colors hover:text-white" href="/templates">
+            <Link
+              className="text-white/60 transition-colors hover:text-white"
+              href="/templates"
+            >
               Templates
             </Link>
-            <Link className="text-white/60 transition-colors hover:text-white" href="#">
+            <Link
+              className="text-white/60 transition-colors hover:text-white"
+              href="#"
+            >
               Documentation
             </Link>
           </nav>
           <div className="ml-auto flex items-center space-x-4">
-            <Link className="text-white/60 text-sm transition-colors hover:text-white" href="/login">
+            <Link
+              className="text-white/60 text-sm transition-colors hover:text-white"
+              href="/login"
+            >
               Login
             </Link>
             <Link href="/register">
@@ -39,17 +50,24 @@ export default function Home() {
                 Build blockchain applications with Rust
               </h1>
               <p className="mt-6 text-lg text-white/60 md:text-xl max-w-[700px] mx-auto">
-                A scaffold platform optimized for developing on Stellar and other blockchains. Start fast,
-                scale with confidence.
+                A scaffold platform optimized for developing on Stellar and
+                other blockchains. Start fast, scale with confidence.
               </p>
               <div className="mt-8 flex items-center justify-center gap-4">
-                <Button className="h-12 px-6 bg-white text-black hover:bg-white/90">Get Started</Button>
-                <Button variant="outline" className="h-12 px-6 bg-black text-white hover:text-white border-white/10 hover:bg-black hover:border-white/20 transition-colors">
+                <Button className="h-12 px-6 bg-white text-black hover:bg-white/90">
+                  Get Started
+                </Button>
+                <Button
+                  variant="outline"
+                  className="h-12 px-6 bg-black text-white hover:text-white border-white/10 hover:bg-black hover:border-white/20 transition-colors"
+                >
                   View Documentation
                 </Button>
               </div>
             </div>
           </div>
+
+          <About />
 
           <div className="mt-16 md:mt-24">
             <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
@@ -78,10 +96,10 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-b from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                 <div className="relative space-y-4 p-6 rounded-2xl border border-white/5 bg-white/5">
                   <div className="p-3 w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center">
-                    <svg 
-                      className="w-6 h-6 text-red-500" 
-                      fill="none" 
-                      stroke="currentColor" 
+                    <svg
+                      className="w-6 h-6 text-red-500"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                       aria-label="Fast Development Icon"
                     >
@@ -96,7 +114,8 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-semibold">Fast Development</h3>
                   <p className="text-white/60">
-                    Pre-configured and optimized templates to start developing in minutes.
+                    Pre-configured and optimized templates to start developing
+                    in minutes.
                   </p>
                 </div>
               </div>
@@ -105,7 +124,12 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-b from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                 <div className="relative space-y-4 p-6 rounded-2xl border border-white/5 bg-white/5">
                   <div className="p-3 w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-6 h-6 text-red-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <title>Security Icon</title>
                       <path
                         strokeLinecap="round"
@@ -117,16 +141,24 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-semibold">Built-in Security</h3>
                   <p className="text-white/60">
-                    Implement security best practices from day one with our pre-configured security features and guidelines.
+                    Implement security best practices from day one with our
+                    pre-configured security features and guidelines.
                   </p>
                 </div>
               </div>
 
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-b from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"> </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                  {" "}
+                </div>
                 <div className="relative space-y-4 p-6 rounded-2xl border border-white/5 bg-white/5">
                   <div className="p-3 w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-6 h-6 text-red-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <title>Fast Development Icon</title>
                       <path
                         strokeLinecap="round"
@@ -138,7 +170,8 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-semibold">Multi-Chain</h3>
                   <p className="text-white/60">
-                    Compatibility with multiple blockchains that use Rust as their base language.
+                    Compatibility with multiple blockchains that use Rust as
+                    their base language.
                   </p>
                 </div>
               </div>
@@ -165,6 +198,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
-

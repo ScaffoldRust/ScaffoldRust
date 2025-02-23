@@ -1,4 +1,4 @@
-import type { SVGProps } from "react"
+import type { SVGProps } from "react";
 
 export function MountainIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -16,6 +16,5 @@ export function MountainIcon(props: SVGProps<SVGSVGElement>) {
     >
       <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
-  )
+  );
 }
-

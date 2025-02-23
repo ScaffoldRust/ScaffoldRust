@@ -1,13 +1,21 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const templates = [
   {
     id: 1,
     title: "Stellar Smart Contract Starter",
-    description: "A basic template to get started with smart contracts on Stellar using Rust.",
+    description:
+      "A basic template to get started with smart contracts on Stellar using Rust.",
     category: "Smart Contracts",
     blockchainCompatibility: ["Stellar", "Solana"],
     image:
@@ -16,7 +24,8 @@ const templates = [
   {
     id: 2,
     title: "Stellar DeFi Framework",
-    description: "Framework for building DeFi applications on Stellar with Rust.",
+    description:
+      "Framework for building DeFi applications on Stellar with Rust.",
     category: "DeFi",
     blockchainCompatibility: ["Stellar", "Polkadot"],
     image:
@@ -25,13 +34,14 @@ const templates = [
   {
     id: 3,
     title: "Multi-Chain Asset Bridge",
-    description: "Template for creating an asset bridge between Stellar and other blockchains.",
+    description:
+      "Template for creating an asset bridge between Stellar and other blockchains.",
     category: "Interoperability",
     blockchainCompatibility: ["Stellar", "Ethereum", "Solana"],
     image:
       "https://sjc.microlink.io/qm1Xdzzy07BhdhCbA5aG0Nnwwmvudh6bjUydMJ9fhZqpdkoZR9HJIBUEjpBrBc0ZBe542ft8nFbqVPr8N8-bYQ.jpeg",
   },
-]
+];
 
 export default function TemplatesPage() {
   return (
@@ -42,19 +52,30 @@ export default function TemplatesPage() {
             <span className="font-bold text-xl">ScaffoldRust</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm">
-            <Link className="text-foreground/60 transition-colors hover:text-foreground" href="/">
+            <Link
+              className="text-foreground/60 transition-colors hover:text-foreground"
+              href="/"
+            >
               Home
             </Link>
-            <Link className="text-foreground/60 transition-colors hover:text-foreground" href="#">
+            <Link
+              className="text-foreground/60 transition-colors hover:text-foreground"
+              href="#"
+            >
               Documentation
             </Link>
           </nav>
           <div className="ml-auto flex items-center space-x-4">
-            <Link className="text-foreground/60 text-sm transition-colors hover:text-foreground" href="/login">
+            <Link
+              className="text-foreground/60 text-sm transition-colors hover:text-foreground"
+              href="/login"
+            >
               Login
             </Link>
             <Link href="/register">
-              <Button className="bg-foreground text-background hover:bg-foreground/90">Sing Up</Button>
+              <Button className="bg-foreground text-background hover:bg-foreground/90">
+                Sing Up
+              </Button>
             </Link>
           </div>
         </div>
@@ -62,14 +83,20 @@ export default function TemplatesPage() {
       <main className="flex-1 pt-24">
         <section className="container py-8 md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-            <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Rust Templates for Stellar</h1>
+            <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
+              Rust Templates for Stellar
+            </h1>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Explore our collection of optimized templates for Stellar development
+              Explore our collection of optimized templates for Stellar
+              development
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
             {templates.map((template) => (
-              <Card key={template.id} className="bg-secondary border-border/50 overflow-hidden">
+              <Card
+                key={template.id}
+                className="bg-secondary border-border/50 overflow-hidden"
+              >
                 <CardHeader className="p-0">
                   <div className="relative aspect-video">
                     <Image
@@ -81,9 +108,15 @@ export default function TemplatesPage() {
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <CardTitle className="text-xl mb-2">{template.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground mb-4">{template.category}</CardDescription>
-                  <p className="text-sm text-foreground/80 mb-4">{template.description}</p>
+                  <CardTitle className="text-xl mb-2">
+                    {template.title}
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground mb-4">
+                    {template.category}
+                  </CardDescription>
+                  <p className="text-sm text-foreground/80 mb-4">
+                    {template.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {template.blockchainCompatibility.map((chain) => (
                       <span
@@ -125,6 +158,5 @@ export default function TemplatesPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
