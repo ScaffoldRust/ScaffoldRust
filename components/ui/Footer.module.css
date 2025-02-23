@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #111; 
+    color: white; 
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer a {
+    color: #9ca3af; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
