@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { About } from "@/components/modules/about/AboutSection";
-import Footer from "../components/Footer";
+import Footer from "@/components/Footer";
 
 
 
