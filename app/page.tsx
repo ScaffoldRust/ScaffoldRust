@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { About } from "@/components/modules/about/AboutSection";
+import CallToAction from "@/components/CallToAction";
 
 export default function Home() {
   return (
@@ -175,6 +176,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+        <section className="relative">
+          <CallToAction />
         </section>
       </main>
       <footer className="border-t border-white/5">
