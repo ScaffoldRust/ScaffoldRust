@@ -6,38 +6,11 @@ import { About } from "@/components/modules/about/AboutSection";
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-white/10">
-      <header className="fixed top-0 w-full z-50 border-b border-white/5 backdrop-blur-sm">
-        <div className="container flex h-14 items-center">
-          <Link className="flex items-center justify-center mr-6" href="#">
-            <span className="font-bold text-xl">ScaffoldRust</span>
-          </Link>
-          <nav className="flex items-center space-x-6 text-sm">
-            <Link
-              className="text-white/60 transition-colors hover:text-white"
-              href="/templates"
-            >
-              Templates
-            </Link>
-            <Link
-              className="text-white/60 transition-colors hover:text-white"
-              href="#"
-            >
-              Documentation
-            </Link>
-          </nav>
-          <div className="ml-auto flex items-center space-x-4">
-            <Link
-              className="text-white/60 text-sm transition-colors hover:text-white"
-              href="/login"
-            >
-              Login
-            </Link>
-            <Link href="/register">
-              <Button className="h-10 px-4 bg-white text-black hover:bg-white/90">
-                Sign Up
-              </Button>
-            </Link>
-          </div>
+      <header className="fixed top-0 w-full z-50 bg-black border-b border-white/5">
+        <div className="container mx-auto flex items-center justify-between h-20">
+          <Logo />
+          <Navigation />
+          <AuthButtons />
         </div>
       </header>
       <main>
