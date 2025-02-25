@@ -47,6 +47,10 @@ export default function Home() {
       <main>
         <section className="relative pt-32 pb-16 md:pt-48 md:pb-32">
           <Hero />
+
+          <div className="mt-[180px] mb-[96px]">
+            <KeyFeatures />
+          </div>
           <About />
           <div className="mt-[180px] mb-[96px]">
             <KeyFeatures />
