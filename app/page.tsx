@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import KeyFeatures from "@/components/KeyFeatures";
 import { About } from "@/components/modules/about/AboutSection";
 import Footer from "@/components/Footer";
 
@@ -68,6 +69,9 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="mt-[180px] mb-[96px]">
+            <KeyFeatures />
+          </div>
           <About />
 
           <div className="mt-16 md:mt-24">
