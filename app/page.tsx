@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import KeyFeatures from "@/components/KeyFeatures";
 import { About } from "@/components/modules/about/AboutSection";
 import Logo from "@/components/header/logo";
 import Navigation from "@/components/header/navigation";
@@ -41,6 +42,9 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="mt-[180px] mb-[96px]">
+            <KeyFeatures />
+          </div>
           <About />
 
           <div className="mt-16 md:mt-24">
@@ -153,23 +157,9 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="border-t border-white/5">
-        <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
-          <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-            <p className="text-center text-sm leading-loose text-white/60 md:text-left">
-              Built by{" "}
-              <a href="#" className="font-medium underline underline-offset-4">
-                ScaffoldRust
-              </a>
-              . The source code is available on{" "}
-              <a href="#" className="font-medium underline underline-offset-4">
-                GitHub
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-      </footer>
+      
+        
+      <Footer />
     </div>
   );
 }
