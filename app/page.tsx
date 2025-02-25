@@ -2,9 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { About } from "@/components/modules/about/AboutSection";
-import Logo from "@/components/header/logo";
-import Navigation from "@/components/header/navigation";
-import AuthButtons from "@/components/header/auth-buttons";
 
 export default function Home() {
   return (
