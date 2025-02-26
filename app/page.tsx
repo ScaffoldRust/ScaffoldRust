@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import KeyFeatures from "@/components/KeyFeatures";
 import { About } from "@/components/modules/about/AboutSection";
@@ -7,6 +5,7 @@ import Logo from "@/components/header/logo";
 import Navigation from "@/components/header/navigation";
 import AuthButtons from "@/components/header/auth-buttons";
 import Footer from "@/components/Footer";
+import CallToAction from "@/components/CallToAction";
 
 export default function Home() {
   return (
@@ -137,6 +136,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+        <section className="relative">
+          <CallToAction />
         </section>
       </main>
       <Footer />
