@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import KeyFeatures from "@/components/KeyFeatures";
 import { About } from "@/components/modules/about/AboutSection";
