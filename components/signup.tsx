@@ -1,24 +1,14 @@
 "use client"
 
 import type React from "react"
-
 import Link from "next/link"
 import { Button, Card, CardContent } from "./ui";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
 import { Separator } from "./ui/separator";
-
-
-
-
 import { Github, Twitter } from "lucide-react"
 
 export default function SignupForm() {
-  
-
-  
-
- 
 
   return (
     <Card className="dark bg-black text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] w-[448px] ">
