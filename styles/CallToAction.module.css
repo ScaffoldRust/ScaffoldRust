@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+  /* background-color: #0d0d0d; */
+
+  min-height: 416px;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.signUpButton {
+  /* background-color: #ffffff;  */
+  padding: 13px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.signUpButton:hover {
+  background-color: rgb(255 255 255 / 0.9);
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+
+  .signUpButton {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .title {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  .signUpButton {
+    padding: 11px 28px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 700px; /* Adjust the width as needed */
+    margin-bottom: 40px;
+  }
+
+  .signUpButton {
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+}

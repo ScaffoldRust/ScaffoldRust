@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Hero from "@/components/hero";
 import KeyFeatures from "@/components/KeyFeatures";
@@ -8,6 +6,7 @@ import Logo from "@/components/header/logo";
 import Navigation from "@/components/header/navigation";
 import AuthButtons from "@/components/header/auth-buttons";
 import Footer from "@/components/Footer";
+import CallToAction from "@/components/CallToAction";
 import WhyChooseUs from "@/components/WhyChoose";
 
 export default function Home() {
@@ -52,6 +51,9 @@ export default function Home() {
           </div>
         </section>
         <WhyChooseUs/>
+        <section className="relative">
+          <CallToAction />
+        </section>
       </main>
       <Footer />
     </div>
