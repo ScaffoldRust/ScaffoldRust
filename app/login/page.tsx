@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, Twitter } from "lucide-react"
+import LoginContent from "@/components/login"
 
 export default function LoginPage() {
   return (
@@ -39,6 +39,7 @@ export default function LoginPage() {
       </header>
 
       <main className="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+        <LoginContent />
       </main>
 
       <footer className="relative z-10 border-t border-white/5 bg-black">
