@@ -1,89 +1,163 @@
-import { Search } from "lucide-react";
+import { Search, ChevronDown, X } from "lucide-react";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { div } from "framer-motion/client";
+import { motion } from "framer-motion";
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-    const [isVisible, setIsVisible] = useState(true);
-    const [query, setQuery] = useState("")
-   
-    const categories = [
-        {
-          value: "Languages",
-          label: "Programming Languages",
-          options: ["Languages", "Rust", "JavaScript", "TypeScript", "Python"],
-        },
-        {
-          value: "Frameworks",
-          label: "Frameworks",
-          options: ["Frameworks", "React", "Svelte", "Next.js", "Vue"],
-        },
-        {
-          value: "Ecosystem",
-          label: "Ecosystem",
-          options: ["Ecosystem", "Node.js", "Deno", "Bun", "Electron"],
-        },
-      ];
-     
-     ;
+  const [isVisible, setIsVisible] = useState(true);
+  const [query, setQuery] = useState("");
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string }>({
+    "Choose Category": "Choose Category",
+    "Choose State": "Choose State",
+    Ecosystem: "Ecosystem",
+  });
+
+  const categories = [
+    {
+      value: "Choose Category",
+      label: "Choose Category",
+      options: ["Rust", "JavaScript", "TypeScript", "Python"],
+    },
+    {
+      value: "Choose State",
+      label: "Choose State",
+      options: ["React", "Svelte", "Next.js", "Vue"],
+    },
+    {
+      value: "Ecosystem",
+      label: "Ecosystem",
+      options: ["Node.js", "Deno", "Bun", "Electron"],
+    },
+  ];
+
+  const handleSelect = (category: string, option: string) => {
+    setSelectedFilters((prev) => ({
+      ...prev,
+      [category]: option,
+    }));
+    setOpenDropdown(null);
+  };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
   };
 
   const handleSearch = () => {
-    onSearch(query);
+    if (query.trim()) {
+      onSearch(query);
+    }
+  };
+
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
+  const toggleVisibility = () => {
+    setIsVisible((prev) => !prev);
   };
 
   return (
-    <div className="w-[1024px] h-[50px] flex gap-[16px] p-[8px] items-center rounded-[9999px] bg-white shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
-      
-        <div className="w-[364px] h-[40px] pl-[8px] rounded-[6px]">
-            <input
-                type="text"
-                placeholder="Search templates"
-                className="w-full h-full p-[8px] text-sm rounded-[6px] bg-transparent border-none focus:outline-none"
-                value={query}
-                onChange={handleInputChange}
-            />
-        </div>
-    
-        {/* <div className="flex flex-col gap-4 w-[200px]">
-      <button
-        className="bg-blue-500 text-white px-4 py-2 rounded-md"
-        onClick={() => setIsVisible((prev) => !prev)}
-      >
-        Toggle Dropdowns
-      </button>
+    <div className="lg:w-[1024px] relative w-auto h-[50px] gap-4 flex lg:gap-[16px] p-[8px] items-center rounded-[9999px] bg-white shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
+      {/* Search Input */}
+      <div className="lg:w-[364px] sm:w-[300px] flex items-center h-[40px] pl-[8px] rounded-[6px]">
+        <input
+          type="text"
+          placeholder="Search templates"
+          className="w-full h-full md:w-[220px] lg:w-full p-[8px] text-sm text-[#0A0A0A] rounded-[6px] bg-transparent focus:outline-none"
+          value={query}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyPress}
+        />
+        {query && <X color="#0A0A0A" size={16} onClick={() => setQuery("")} className="cursor-pointer" />}
+      </div>
 
-      <AnimatePresence>
-        {isVisible &&
-          categories.map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-            >
-              <select className="flex justify-between transition-all duration-300 outline-none w-[180px] h-[40px] rounded-[6px] py-[10px] px-[12px] bg-white text-[#0A0A0A] text-[13.02px] shadow-md cursor-pointer">
-                {category.options.map((option, i) => (
-                  <option key={i} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </motion.div>
-          ))}
-      </AnimatePresence>
-    </div> */}
-            <div className="bg-[#171717] hover:scale-[1.1] transition-all duration-300 rounded-full p-[12px] w-[40px] h-[40px] flex items-center justify-center">
-            <Search  color="white" size={16}/>
+      {/* Mobile Dropdown */}
+      <div>
+        <ChevronDown className="md:hidden cursor-pointer" color="#0A0A0A" size={16} onClick={toggleVisibility} />
+        <div className={`md:hidden sm:w-[404px] ${isVisible ? "flex" : "hidden"} absolute sm:left-0 right-10 sm:-bottom-[55px] top-12 flex-col sm:flex-row sm:rounded-full sm:h-[50px] justify-around bg-white flex items-center sm:gap-4`}>
+          {categories.map((category) => (
+            <div key={category.value} className="relative flex items-center justify-between">
+              {/* Dropdown Button */}
+              <button
+                onClick={() => setOpenDropdown(openDropdown === category.value ? null : category.value)}
+                className="w-full flex items-center justify-between px-4 py-2 bg-white text-[13.02px] text-[#0A0A0A] rounded-lg text-left hover:bg-gray-100 transition-all duration-300"
+              >
+                {selectedFilters[category.value]}
+                <ChevronDown color="#0A0A0A" size={13} />
+              </button>
+
+              {/* Dropdown Menu */}
+              {openDropdown === category.value && (
+                <motion.ul
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute right-[100px] -top-3 mt-2 w-full bg-white text-[13px] text-[#0A0A0A] shadow-lg rounded-lg"
+                >
+                  {category.options.map((option) => (
+                    <li
+                      key={option}
+                      onClick={() => handleSelect(category.value, option)}
+                      className="px-4 py-2 bg-white rounded-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer"
+                    >
+                      {option}
+                    </li>
+                  ))}
+                </motion.ul>
+              )}
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Dropdown */}
+      <div className="md:flex hidden items-center gap-4 w-fit">
+        {categories.map((category) => (
+          <div key={category.value} className="relative flex items-center md:w-[130px] lg:w-[180px]">
+            {/* Dropdown Button */}
+            <button
+              onClick={() => setOpenDropdown(openDropdown === category.value ? null : category.value)}
+              className="w-full flex items-center justify-between px-4 py-2 bg-white text-[13.02px] text-[#0A0A0A] rounded-lg text-left hover:bg-gray-100 transition-all duration-300"
+            >
+              {selectedFilters[category.value]}
+              <ChevronDown color="#0A0A0A" size={13} />
+            </button>
+
+            {/* Dropdown Menu */}
+            {openDropdown === category.value && (
+              <motion.ul
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="absolute left-0 top-[25px] mt-2 w-full bg-white text-[13px] text-[#0A0A0A] shadow-lg rounded-lg border"
+              >
+                {category.options.map((option) => (
+                  <li
+                    key={option}
+                    onClick={() => handleSelect(category.value, option)}
+                    className="px-4 py-2 rounded-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer"
+                  >
+                    {option}
+                  </li>
+                ))}
+              </motion.ul>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Search Button */}
+      <div onClick={handleSearch} className="bg-[#171717] hover:scale-[1.1] transition-all duration-300 rounded-full p-[12px] w-[40px] h-[40px] flex items-center justify-center cursor-pointer">
+        <Search color="white" size={16} />
+      </div>
     </div>
   );
 };
