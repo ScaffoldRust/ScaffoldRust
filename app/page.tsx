@@ -8,6 +8,7 @@ import Logo from "@/components/header/logo";
 import Navigation from "@/components/header/navigation";
 import AuthButtons from "@/components/header/auth-buttons";
 import Footer from "@/components/Footer";
+import WhyChooseUs from "@/components/WhyChoose";
 
 export default function Home() {
   return (
@@ -50,6 +51,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <WhyChooseUs/>
       </main>
       <Footer />
     </div>
