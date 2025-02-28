@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
+    <section className="relative pt-60 pb-50 md:pt-16 md:pb-32 overflow-hidden">
       <Particles
         id="tsparticles"
         init={particlesInit}

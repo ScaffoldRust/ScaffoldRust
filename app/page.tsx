@@ -19,16 +19,16 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <section className="relative pt-32 pb-16 md:pt-48 md:pb-32">
+        <section className="relative pt-40 pb-45 md:pt-50 md:pb-32">
           <Hero />
-          <div className="mt-[180px] mb-[96px]">
+          <div className="mt-[160px] mb-[96px]">
             <KeyFeatures />
           </div>
           <div className="mt-[180px] mb-[96px]">
             <About />
           </div>
         </section>
-        <div className="mt-[-58px] mb-[96px]">
+        <div className="mt-[-68px] mb-[96px]">
           <WhyChooseUs />
         </div>
         <section className="relative">
