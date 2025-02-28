@@ -5,6 +5,7 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
 const Hero = () => {
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   const particlesInit = async (engine: any) => {
     await loadSlim(engine);
   };
@@ -38,7 +39,7 @@ const Hero = () => {
           <motion.h1
             initial={{ textShadow: "0px 0px 0px rgba(255,255,255,0)" }}
             animate={{ textShadow: "0px 0px 30px rgba(255,255,255,0.5)" }}
-            transition={{ repeat: Infinity, repeatType: "mirror", duration: 2 }}
+            transition={{ repeat: Number.POSITIVE_INFINITY, repeatType: "mirror", duration: 2 }}
             className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50"
           >
             Build blockchain applications with Rust
