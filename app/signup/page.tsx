@@ -7,8 +7,11 @@ export default function SignUpPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 z-0">
+        {/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
+        {/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
+        {/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
       </div>
 
