@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Github, Twitter } from "lucide-react"
+import SignupForm from "@/components/signup"
 
 export default function SignUpPage() {
   return (
@@ -39,6 +40,7 @@ export default function SignUpPage() {
       </header>
 
       <main className="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+        <SignupForm/>
       </main>
 
       <footer className="relative z-10 border-t border-white/5 bg-black">
