@@ -1,4 +1,4 @@
-'use client'
+'use client'; // Add this line to mark the component as a Client Component
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -56,8 +56,11 @@ const templates = [
     image:
       "https://sjc.microlink.io/qm1Xdzzy07BhdhCbA5aG0Nnwwmvudh6bjUydMJ9fhZqpdkoZR9HJIBUEjpBrBc0ZBe542ft8nFbqVPr8N8-bYQ.jpeg",
   },
-  
 ];
+
+import Logo from "@/components/header/logo";
+import Navigation from "@/components/header/navigation";
+import AuthButtons from "@/components/header/auth-buttons";
 
 export default function TemplatesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -77,54 +80,24 @@ export default function TemplatesPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary/10 selection:text-primary">
-      {/* Header - Keep your existing header */}
-      <header className="fixed top-0 z-50 w-full border-b border-border/40 backdrop-blur-sm">
-        <div className="container flex items-center h-14">
-          <Link className="flex items-center justify-center mr-6" href="/">
-            <span className="text-xl font-bold">ScaffoldRust</span>
-          </Link>
-          <nav className="flex items-center space-x-6 text-sm">
-            <Link
-              className="transition-colors text-foreground/60 hover:text-foreground"
-              href="/"
-            >
-              Home
-            </Link>
-            <Link
-              className="transition-colors text-foreground/60 hover:text-foreground"
-              href="#"
-            >
-              Documentation
-            </Link>
-          </nav>
-          <div className="flex items-center ml-auto space-x-4">
-            <Link
-              className="text-sm transition-colors text-foreground/60 hover:text-foreground"
-              href="/login"
-            >
-              Login
-            </Link>
-            <Link href="/register">
-              <Button className="bg-foreground text-background hover:bg-foreground/90">
-                Sing Up
-              </Button>
-            </Link>
-          </div>
+    <div className="min-h-screen bg-white flex flex-col">
+      <header className="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
+        <div className="container mx-auto flex items-center justify-between h-20">
+          <Logo theme="light" />
+          <Navigation theme="light" />
+          <AuthButtons theme="light" />
         </div>
       </header>
-      
-      <main className="flex-1 pt-24">
+      <main className="container mx-auto pt-32 flex-grow">
         <section className="container py-8 md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-            <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
+            <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-black">
               Rust Templates for Stellar
             </h1>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               Explore our collection of optimized templates for Stellar development
             </p>
           </div>
-          
           {/* Add Filters component */}
           <div className="mt-8">
             <Filters 
@@ -132,11 +105,11 @@ export default function TemplatesPage() {
               selectedCategory={selectedCategory} 
             />
           </div>
-          
+
           {/* Template cards */}
           {filteredTemplates.length === 0 ? (
             <div className="py-10 text-center">
-              <p className="text-muted-foreground">No templates found for the selected category.</p>
+              <p className="text-black">No templates found for the selected category.</p>
             </div>
           ) : (
             <div className="grid gap-6 mt-12 md:grid-cols-2 lg:grid-cols-3">
@@ -189,17 +162,18 @@ export default function TemplatesPage() {
           )}
         </section>
       </main>
-
-      <footer className="border-t border-border/40">
+      <footer className="mt-auto border-t border-gray-200">
         <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
           <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-            <p className="text-sm leading-loose text-center text-muted-foreground md:text-left">
+            <p className="text-center text-sm leading-loose text-gray-600 md:text-left">
               Built by{" "}
-              <a href="#" className="font-medium underline underline-offset-4">
+              {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
+              <a href="#" className="font-medium underline underline-offset-4 text-gray-900">
                 StellarRust
               </a>
               . The source code is available on{" "}
-              <a href="#" className="font-medium underline underline-offset-4">
+              {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
+              <a href="#" className="font-medium underline underline-offset-4 text-gray-900">
                 GitHub
               </a>
               .
