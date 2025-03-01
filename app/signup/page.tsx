@@ -1,13 +1,17 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Github, Twitter } from "lucide-react"
+import SignupForm from "@/components/signup"
 
 export default function SignUpPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 z-0">
+        {/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
+        {/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
+        {/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
       </div>
 
@@ -39,6 +43,7 @@ export default function SignUpPage() {
       </header>
 
       <main className="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+        <SignupForm/>
       </main>
 
       <footer className="relative z-10 border-t border-white/5 bg-black">
