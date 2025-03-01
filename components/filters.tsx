@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Gamepad2, Wallet, Store, FileCode, Image, Users, Link2, RadioTower, ChevronDown, X } from "lucide-react";
+import { Gamepad2, Wallet, Store, FileCode, Image, Users, Network, ChevronDown, X, Radio } from "lucide-react";
 
 interface FiltersProps {
   onCategoryChange: (category: string | null) => void;
@@ -13,8 +13,8 @@ const categories = [
   { name: "Smart Contracts", icon: <FileCode className="w-4 h-4 text-black" /> },
   { name: "NFT", icon: <Image className="w-4 h-4 text-black" /> },
   { name: "DAO", icon: <Users className="w-4 h-4 text-black" /> },
-  { name: "Cross-Chain", icon: <Link2 className="w-4 h-4 text-black" /> },
-  { name: "Oracles", icon: <RadioTower className="w-4 h-4 text-black" /> },
+  { name: "Cross-Chain", icon: <Network className="w-4 h-4 text-black" /> },
+  { name: "Oracles", icon: <Radio className="w-4 h-4 text-black" /> },
 ];
 
 export function Filters({ onCategoryChange, selectedCategory }: FiltersProps) {
@@ -48,7 +48,7 @@ export function Filters({ onCategoryChange, selectedCategory }: FiltersProps) {
     <div className="flex flex-col items-center w-full gap-4 mb-8 sm:flex-row sm:justify-center">
       
       {/* Desktop category list */}
-      <div className="flex-wrap hidden gap-2 sm:flex">
+      <div className="flex-wrap hidden gap-6 sm:flex">
         {categories.map((category) => (
           <button
             key={category.name}
@@ -93,7 +93,7 @@ export function Filters({ onCategoryChange, selectedCategory }: FiltersProps) {
               }`}
               onClick={() => handleCategoryChange(category.name)}
             >
-              <div className="mr-2 text-black">{category.icon}</div>
+              <div className="mr-4 text-black">{category.icon}</div>
               <span className="text-black">{category.name}</span>
             </div>
           ))}
