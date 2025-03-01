@@ -7,7 +7,7 @@ import AuthButtons from "@/components/header/auth-buttons";
 import Footer from "@/components/Footer";
 import CallToAction from "@/components/CallToAction";
 import WhyChooseUs from "@/components/WhyChoose";
-import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="min-h-screen text-white bg-black selection:bg-white/10">
