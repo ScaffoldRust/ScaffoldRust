@@ -1,6 +1,9 @@
+"use client"
+
 import Logo from "@/components/header/logo";
 import Navigation from "@/components/header/navigation";
 import AuthButtons from "@/components/header/auth-buttons";
+import SearchBar from "@/components/search-bar";
 
 export default function TemplatesPage() {
   return (
@@ -13,6 +16,7 @@ export default function TemplatesPage() {
         </div>
       </header>
       <main className="container mx-auto pt-32 flex-grow">
+        <SearchBar  onSearch={() => {}}/>
         <section className="container py-8 md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
             <p className="text-gray-600 text-lg">
