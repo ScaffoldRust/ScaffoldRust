@@ -10,9 +10,9 @@ import WhyChooseUs from "@/components/WhyChoose";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-white/10">
-      <header className="fixed top-0 w-full z-50 bg-black border-b border-white/5">
-        <div className="container mx-auto flex items-center justify-between h-20">
+    <div className="min-h-screen text-white bg-black selection:bg-white/10">
+      <header className="fixed top-0 z-50 w-full bg-black border-b border-white/5">
+        <div className="container flex items-center justify-between h-20 mx-auto">
           <Logo />
           <Navigation />
           <AuthButtons />
