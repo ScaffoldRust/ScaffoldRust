@@ -80,13 +80,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
       {/* Mobile Dropdown */}
       <div>
         <ChevronDown className="md:hidden cursor-pointer" color="#0A0A0A" size={16} onClick={toggleVisibility} />
-        <div className={`md:hidden sm:w-[404px] ${isVisible ? "flex" : "hidden"} absolute sm:left-0 right-10 sm:-bottom-[55px] top-12 flex-col sm:flex-row sm:rounded-full sm:h-[50px] justify-around bg-white flex items-center sm:gap-4`}>
+        <div className={`md:hidden sm:w-fit ${isVisible ? "flex" : "hidden"} absolute sm:left-0 right-10 sm:-bottom-[55px] top-14 flex-col sm:flex-row sm:rounded-full sm:h-[50px] sm:items-center justify-around bg-white flex items-start sm:gap-4`}>
           {categories.map((category) => (
-            <div key={category.value} className="relative flex items-center justify-between">
+            <div key={category.value} className="relative w-full rounded-lg  flex items-center justify-between">
               {/* Dropdown Button */}
               <button
                 onClick={() => setOpenDropdown(openDropdown === category.value ? null : category.value)}
-                className="w-full flex items-center justify-between px-4 py-2 bg-white text-[13.02px] text-[#0A0A0A] rounded-lg text-left hover:bg-gray-100 transition-all duration-300"
+                className="flex items-center justify-between px-4 py-2  bg-white sm:truncate w-full text-[13.02px] text-[#0A0A0A] rounded-lg sm:rounded-full md:rounded-lg text-left hover:bg-gray-100 transition-all duration-300"
               >
                 {selectedFilters[category.value]}
                 <ChevronDown color="#0A0A0A" size={13} />
@@ -99,13 +99,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute right-[100px] -top-3 mt-2 w-full bg-white text-[13px] text-[#0A0A0A] shadow-lg rounded-lg"
+                  className="absolute right-[150px] -top-2 sm:top-10 sm:right-0  mt-2 w-full bg-white text-[13px] text-[#0A0A0A] shadow-lg rounded-lg"
                 >
                   {category.options.map((option) => (
                     <li
                       key={option}
                       onClick={() => handleSelect(category.value, option)}
-                      className="px-4 py-2 bg-white rounded-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer"
+                      className="px-4 min-w-[140px] relative z-10 py-2 bg-white rounded-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                     >
                       {option}
                     </li>
@@ -120,7 +120,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
       {/* Desktop Dropdown */}
       <div className="md:flex hidden items-center gap-4 w-fit">
         {categories.map((category) => (
-          <div key={category.value} className="relative flex items-center md:w-[130px] lg:w-[180px]">
+          <div key={category.value} className="relative flex items-center md:w-fit lg:w-[180px]">
             {/* Dropdown Button */}
             <button
               onClick={() => setOpenDropdown(openDropdown === category.value ? null : category.value)}
