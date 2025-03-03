@@ -1,8 +1,13 @@
+'use client'
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Github, Twitter } from "lucide-react"
 import LoginContent from "@/components/login"
 
+
 export default function LoginPage() {
+
   return (
     <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 z-0">
