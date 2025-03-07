@@ -1,11 +1,20 @@
-"use client"
+'use client'
 
+import { useState } from "react";
 import Logo from "@/components/header/logo";
 import Navigation from "@/components/header/navigation";
 import AuthButtons from "@/components/header/auth-buttons";
+import { Filters } from "../../components/filters";
 import SearchBar from "@/components/search-bar";
 
 export default function TemplatesPage() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+ 
+
+  const handleCategoryChange = (category: string | null) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <header className="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
@@ -19,9 +28,22 @@ export default function TemplatesPage() {
         <SearchBar  onSearch={() => {}}/>
         <section className="container py-8 md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-black">
+              Rust Templates for Stellar
+            </h1>
             <p className="text-gray-600 text-lg">
+            Explore our collection of optimized templates for Stellar development
             </p>
           </div>
+
+          {/* Add Filters component */}
+          <div className="mt-8">
+            <Filters 
+              onCategoryChange={handleCategoryChange} 
+              selectedCategory={selectedCategory} 
+            />
+          </div>
+
         </section>
       </main>
       <footer className="mt-auto border-t border-gray-200">
@@ -46,4 +68,3 @@ export default function TemplatesPage() {
     </div>
   );
 }
-
